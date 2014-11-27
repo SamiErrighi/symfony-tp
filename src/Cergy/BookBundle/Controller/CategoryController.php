@@ -26,7 +26,11 @@ class CategoryController extends Controller
             $form->handleRequest($request);
             if($form->isValid()) {
                 //check if the category already exist
-                $this->categoryAlreadyExist($form->getData()->getName());
+                if($this->categoryAlreadyExist($form->getData()->getName())) {
+                    $this->get('session')->getFlashBag()->add("success", "Category already exist");
+                    return $this->redirect($this->generateUrl('cergy_book_category_create'));
+                }
+                
                 $em =  $this->getDoctrine()->getManager();
                 $em->persist($form->getData());
                 $em->flush();
@@ -44,13 +48,15 @@ class CategoryController extends Controller
     private function categoryAlreadyExist($name)
     {
         $category = $this->getDoctrine()
-            ->getRepository('CergyBookBundle:Book')
+            ->getRepository('CergyBookBundle:Category')
             ->findByName($name)
         ;
 
+
         if(null != $category) {
-            $this->get('session')->getFlashBag()->add("success", "Category already exist");
-            return $this->redirect($this->generateUrl('cergy_book_category_create'));
+            return true;
         }
+
+        return false;
     }
 }

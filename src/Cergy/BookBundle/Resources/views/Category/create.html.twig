@@ -1,5 +1,10 @@
 {% extends "::base.html.twig" %}
 
 {% block content %}
+    {% if app.session.flashBag.has('success') %}
+        {% for message in  app.session.flashBag.get('success') %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
     {{ include('CergyBookBundle:Category:_form.html.twig') }}
 {% endblock %}
