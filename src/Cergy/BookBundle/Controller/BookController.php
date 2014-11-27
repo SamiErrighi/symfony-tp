@@ -28,6 +28,16 @@ class BookController extends Controller
      */
     public function createAction(Request $request)
     {
+        $categories = $this->getDoctrine()
+            ->getRepository('CergyBookBundle:Category')
+            ->findAll()
+        ;
+
+        if(count($categories) <= 0) {
+            $this->get('session')->getFlashBag()->add("success", "create a category first");
+            return $this->redirect($this->generateUrl('books_list'));
+        }
+
         $form = $this->createForm(new BookType());
         if($request->isMethod('POST')) {
             $form->handleRequest($request);

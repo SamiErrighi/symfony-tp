@@ -50,7 +50,7 @@ class NewsController extends Controller
                 $em->persist($form->getData());
                 $em->flush();
                 $this->get('session')->getFlashBag()->add("success", "sssss");
-                return $this->redirect($this->generateUrl('news_list'));
+                return $this->redirect($this->generateUrl('news_lis_'));
             }
         }
 
