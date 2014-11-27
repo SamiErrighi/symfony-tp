@@ -2,7 +2,7 @@
 
 namespace Cergy\ApiBundle\Controller;
 
-use Cergy\NewsBundle\Form\Type\BookType;
+use Cergy\BookBundle\Form\Type\BookType;
 use FOS\RestBundle\Controller\FOSRestController as Controller;
 use FOS\RestBundle\Util\Codes;
 use Symfony\Component\HttpFoundation\Request;
@@ -33,7 +33,7 @@ class BooksController extends Controller
      */
     public function postBooksAction(Request $request)
     {
-        $form = $this->get('form.factory')->createNamed('form', new BooksType(), [
+        $form = $this->get('form.factory')->createNamed('form', new BookType(), [
             'csrf_protection' => false,
             'method'          => $request->getMethod()
         ]);
