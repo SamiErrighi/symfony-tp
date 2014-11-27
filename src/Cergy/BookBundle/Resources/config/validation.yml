@@ -23,3 +23,12 @@ Cergy\BookBundle\Entity\Book:
                 value: 500.00
             - NotEqualTo:
                 value: test
+
+Cergy\BookBundle\Entity\Category:
+    properties:
+        name:
+            - NotBlank: ~
+            - Length:
+                min: 5
+                minMessage: Trop petit
+                maxMessage: Trop long {{ limit }}

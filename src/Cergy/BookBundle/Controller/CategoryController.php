@@ -30,7 +30,7 @@ class CategoryController extends Controller
                     $this->get('session')->getFlashBag()->add("success", "Category already exist");
                     return $this->redirect($this->generateUrl('cergy_book_category_create'));
                 }
-                
+
                 $em =  $this->getDoctrine()->getManager();
                 $em->persist($form->getData());
                 $em->flush();
