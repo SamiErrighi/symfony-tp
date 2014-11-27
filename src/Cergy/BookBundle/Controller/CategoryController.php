@@ -14,15 +14,18 @@ use Symfony\Component\HttpFoundation\Request;
 class CategoryController extends Controller
 {
     /**
+     * create a new category
      * @Route("/create")
      * @Template()
      */
     public function createAction(Request $request)
     {
         $form = $this->createForm(new CategoryType());
+
         if($request->isMethod('POST')) {
             $form->handleRequest($request);
             if($form->isValid()) {
+                //check if the category already exist
                 $this->categoryAlreadyExist($form->getData()->getName());
                 $em =  $this->getDoctrine()->getManager();
                 $em->persist($form->getData());
@@ -37,6 +40,7 @@ class CategoryController extends Controller
         ];
     }
 
+    //check method
     private function categoryAlreadyExist($name)
     {
         $category = $this->getDoctrine()

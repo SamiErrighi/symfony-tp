@@ -10,7 +10,10 @@ use Symfony\Component\HttpFoundation\Request;
 
 class BooksController extends Controller
 {
-
+    /**
+     * get all book
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function getBooksAction()
     {
         $books = $this->getDoctrine()
@@ -23,6 +26,11 @@ class BooksController extends Controller
         return $this->handleView($view);
     }
 
+    /**
+     * update a book
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function postBooksAction(Request $request)
     {
         $form = $this->get('form.factory')->createNamed('form', new BooksType(), [
@@ -44,6 +52,11 @@ class BooksController extends Controller
         ], Codes::HTTP_BAD_REQUEST));
     }
 
+    /**
+     * delete a book
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function deleteBooksAction($id)
     {
         $book = $this->getDoctrine()
