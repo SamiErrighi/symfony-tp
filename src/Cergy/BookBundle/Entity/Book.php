@@ -4,11 +4,13 @@ namespace Cergy\BookBundle\Entity;
 
 use Gedmo\Mapping\Annotation as Behavior;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as JMS;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="books")
  * @author Sami Errighi
+ * @JMS\ExclusionPolicy("all")
  */
 class Book
 {
@@ -21,34 +23,39 @@ class Book
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @JMS\Expose
      */
     private $name;
 
     /**
      * @ORM\Column(type="datetime", name="available_at")
-     *
+     * @JMS\Expose
      */
     private $availableAt;
 
     /**
      * @ORM\Column(type="datetime", name="created_at")
      * @Behavior\Timestampable(on="create")
+     * @JMS\Expose
      */
     private $createdAt;
 
     /**
      * @ORM\Column(type="datetime", name="updated_at")
      * @Behavior\Timestampable(on="update")
+     * @JMS\Expose
      */
     private  $updatedAt;
 
     /**
      * @ORM\Column(type="text")
+     * @JMS\Expose
      */
     private $description;
 
     /**
      * @ORM\Column(type="decimal")
+     * @JMS\Expose
      */
     private $price;
 

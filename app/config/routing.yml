@@ -3,6 +3,11 @@ cergy_api_news:
     type:     rest
     prefix:   /api
 
+cergy_api_book:
+    resource: "@CergyApiBundle/Controller/BooksController.php"
+    type:     rest
+    prefix:   /api
+
 cergy_user:
     resource: "@CergyUserBundle/Controller/"
     type:     annotation
