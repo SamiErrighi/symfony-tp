@@ -28,6 +28,9 @@ class BookType extends AbstractType
             ->add('price', 'text', [
                 'required' => true
             ])
+            ->add('availableAt', 'datetime', [
+                'required' => true
+            ])
             ->add('category', 'entity', [
                 'class' =>  'CergyBookBundle:Category',
                 'property' => 'name'
