@@ -1,6 +1,10 @@
 {% extends '::base.html.twig' %}
 
 {% block content %}
+    <ul>
+        <li><a href="{{ path('cergy_book_book_create')}}">Créer un livre</a></li>
+        <li><a href="{{ path('cergy_book_category_create')}}">Créer une category</a></li>
+    </ul>
     {% if app.session.flashBag.has('success') %}
         {% for message in  app.session.flashBag.get('success') %}
             {{ message }}
