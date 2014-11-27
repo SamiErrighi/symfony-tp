@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+    {% if app.session.flashBag.has('success') %}
+        {% for message in  app.session.flashBag.get('success') %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
+    {% for article in news %}
+        <h1>{{ article.title }}</h1>
+        {{ article.content }}
+        {{ article.createdAt|date("m/d/Y") }}
+        {{ article.user.username }}
+        <a href="{{ path('cergy_news_news_edit', {'id': article.id}) }}">Editer</a>
+        <a href="{{ path('cergy_news_news_delete', {'id': article.id}) }}">Supprimer</a>
+    {% endfor %}
+{% endblock %}

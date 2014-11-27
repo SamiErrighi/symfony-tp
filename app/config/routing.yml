@@ -1,0 +1,29 @@
+cergy_book:
+    resource: "@CergyBookBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+cergy_api_news:
+    resource: "@CergyApiBundle/Controller/NewsController.php"
+    type:     rest
+    prefix:   /api
+
+cergy_user:
+    resource: "@CergyUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+cergy_news:
+    resource: "@CergyNewsBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+
+

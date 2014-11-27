@@ -1,0 +1,10 @@
+<form method="POST">
+
+    {{ form_widget(form.title,{'attr': {'placeholder': 'titre'}}) }}
+
+    {{ form_widget(form.content, {'attr': {'placeholder': 'contenu'}}) }}
+    {{ form_errors(form.content) }}
+
+    {{ form_rest(form) }}
+    <input type="submit"/>
+</form>
