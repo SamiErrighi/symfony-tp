@@ -28,11 +28,11 @@ class BookType extends AbstractType
             ->add('price', 'text', [
                 'required' => true
             ])
-            ->add('categories', 'entity', [
+            ->add('category', 'entity', [
                 'class' =>  'CergyBookBundle:Category',
                 'property' => 'name'
             ])
-            ->add('users', 'entity', [
+            ->add('user', 'entity', [
                 'class' =>  'CergyUserBundle:User',
                 'property' => 'username'
             ])
@@ -45,7 +45,7 @@ class BookType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => 'Cergy\BookBundle\Entity\Category'
+            'data_class' => 'Cergy\BookBundle\Entity\Book'
         ]);
     }
 

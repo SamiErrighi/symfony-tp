@@ -19,7 +19,47 @@ class BookController extends Controller
      */
     public function indexAction()
     {
-        return [];
+        $books = $this->getDoctrine()
+            ->getRepository('CergyBookBundle:Book')
+            ->findAll()
+        ;
+        return [
+            "books" => $books
+        ];
+    }
+
+    /**
+     * @Route("/edit/{id}")
+     * @Template()
+     */
+    public function editAction($id, Request $request)
+    {
+        //get book
+        $book = $this->getDoctrine()
+            ->getRepository('CergyBookBundle:Book')
+            ->find($id)
+        ;
+
+        if( null == $book) {
+            $this->get('session')->getFlashBag()->add("success", "book doesn't exist");
+            return $this->redirect($this->generateUrl('books_list'));
+        }
+
+        $form = $this->createForm(new BookType(), $book);
+        if($request->isMethod('POST')) {
+            $form->handleRequest($request);
+            if($form->isValid()) {
+
+                $em =  $this->getDoctrine()->getManager();
+                $em->persist($form->getData());
+                $em->flush();
+                $this->get('session')->getFlashBag()->add("success", "book updated");
+                return $this->redirect($this->generateUrl('books_list'));
+            }
+        }
+        return [
+            'form' => $form->createView()
+        ];
     }
 
     /**
@@ -47,12 +87,36 @@ class BookController extends Controller
                 $em->persist($form->getData());
                 $em->flush();
                 $this->get('session')->getFlashBag()->add("success", "book created");
-                return $this->redirect($this->generateUrl('books_list '));
+                return $this->redirect($this->generateUrl('books_list'));
             }
         }
 
         return [
             "form" => $form->createView()
         ];
+    }
+
+    /**
+     * @Route("/delete/{id}", methods={"GET"})
+     * @Template()
+     */
+    public function deleteAction($id)
+    {
+        $book = $this->getDoctrine()
+            ->getRepository('CergyBookBundle:Book')
+            ->find($id)
+        ;
+
+        if(null == $book) {
+            $this->get('session')->getFlashBag()->add("success", "book doesn't exist");
+            return $this->redirect($this->generateUrl('books_list'));
+        }
+
+        $em =  $this->getDoctrine()->getManager();
+        $em->remove($book);
+        $em->flush();
+
+        $this->get('session')->getFlashBag()->add("success", "book destroyed");
+        return $this->redirect($this->generateUrl('books_list'));
     }
 }

@@ -64,6 +64,10 @@ class Book
      */
     private $user;
 
+    public function __construct()
+    {
+        $this->availableAt = new \DateTime();
+    }
 
     /**
      * @return mixed

@@ -1,1 +1,18 @@
-Hello {{ name }}!
+{% extends '::base.html.twig' %}
+
+{% block content %}
+    {% if app.session.flashBag.has('success') %}
+        {% for message in  app.session.flashBag.get('success') %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
+    {% for book in books %}
+        <h1>{{book.name }}</h1>
+        {{ book.description }}
+        {{ book.availableAt|date("m/d/Y") }}
+        {{ book.user.username }}
+        {{ book.category.name }}
+        <a href="{{ path('cergy_book_book_edit', {'id': book.id}) }}">Editer</a>
+        <a href="{{ path('cergy_book_book_delete', {'id': book.id}) }}">Supprimer</a>
+    {% endfor %}
+{% endblock %}
