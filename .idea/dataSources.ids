@@ -7,6 +7,28 @@
     </database-info>
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
     <schema name="" catalog="symfony"/>
+    <table name="books" schema="" catalog="symfony" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="category_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="available_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="description" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="price" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_4A1B2A92A76ED395" columns="user_id" ref-table="fos_user" ref-schema="" ref-catalog="symfony" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_4A1B2A9212469DE2" columns="category_id" ref-table="categories" ref-schema="" ref-catalog="symfony" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="IDX_4A1B2A9212469DE2" unique="false" columns="category_id"/>
+      <index name="IDX_4A1B2A92A76ED395" unique="false" columns="user_id"/>
+    </table>
+    <table name="categories" schema="" catalog="symfony" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_4A1B2A9212469DE2" table="books" schema="" catalog="symfony" columns="category_id"/>
+    </table>
     <table name="fos_user" schema="" catalog="symfony" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="username" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
@@ -26,6 +48,7 @@
       <column name="credentials_expired" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
       <column name="credentials_expire_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_4A1B2A92A76ED395" table="books" schema="" catalog="symfony" columns="user_id"/>
       <exported-key name="FK_1DD39950A76ED395" table="news" schema="" catalog="symfony" columns="user_id"/>
       <index name="UNIQ_957A647992FC23A8" unique="true" columns="username_canonical"/>
       <index name="UNIQ_957A6479A0D96FBF" unique="true" columns="email_canonical"/>
@@ -36,7 +59,7 @@
       <column name="content" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
       <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="FK_1DD39950A76ED395" columns="user_id" ref-table="fos_user" ref-schema="" ref-catalog="symfony" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="IDX_1DD39950A76ED395" unique="false" columns="user_id"/>

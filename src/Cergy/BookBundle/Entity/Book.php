@@ -52,7 +52,19 @@ class Book
      */
     private $price;
 
-    
+    /**
+     * @ORM\ManyToOne(targetEntity="Cergy\BookBundle\Entity\Category", inversedBy="books")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id", nullable=false)
+     */
+    private $category;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Cergy\UserBundle\Entity\User", inversedBy="books")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=false)
+     */
+    private $user;
+
+
     /**
      * @return mixed
      */
@@ -156,4 +168,37 @@ class Book
     {
         $this->updatedAt = $updatedAt;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
+
 } 

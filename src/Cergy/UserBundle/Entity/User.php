@@ -26,6 +26,11 @@ class User extends BaseUser
      */
     private $news;
 
+    /**
+     *@ORM\OneToMany(targetEntity="Cergy\BookBundle\Entity\Book", mappedBy="user")
+     */
+    private $books;
+
     public function __construct()
     {
         parent::__construct();
@@ -49,4 +54,21 @@ class User extends BaseUser
         $this->news = $news;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getBooks()
+    {
+        return $this->books;
+    }
+
+    /**
+     * @param mixed $books
+     */
+    public function setBooks($books)
+    {
+        $this->books = $books;
+    }
+
 }
