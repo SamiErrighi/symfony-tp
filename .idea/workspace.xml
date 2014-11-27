@@ -58,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cergy/BookBundle/Resources/views/Book/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51877135" vertical-offset="28" max-vertical-offset="375">
+            <state vertical-scroll-proportion="-6.3333335" vertical-offset="28" max-vertical-offset="375">
               <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
               <folding />
             </state>
@@ -71,9 +71,38 @@
       <file leaf-file-name="Category.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cergy/BookBundle/Entity/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="1170">
+            <state vertical-scroll-proportion="-1.875" vertical-offset="30" max-vertical-offset="1170">
               <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-              <folding />
+              <folding>
+                <element signature="e#43#75#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Cergy/BookBundle/Controller/CategoryController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.38053098" vertical-offset="516" max-vertical-offset="855">
+              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+              <folding>
+                <element signature="e#47#91#0#PHP" expanded="true" />
+                <element signature="e#1048#1060#1#PHP" expanded="true" />
+                <element signature="e#1290#1312#1#PHP" expanded="true" />
+                <element signature="e#1535#1563#1#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cergy/BookBundle/Controller/BookController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.0" vertical-offset="315" max-vertical-offset="1920">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="40" selection-end-column="9" />
+              <folding>
+                <element signature="e#47#87#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,18 +120,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cergy/NewsBundle/Controller/NewsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.875" vertical-offset="1530" max-vertical-offset="1935">
-              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="120" selection-end-column="64" />
-              <folding>
-                <element signature="e#47#104#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BooksController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cergy/ApiBundle/Controller/BooksController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,18 +129,6 @@
                 <element signature="e#46#86#0#PHP" expanded="true" />
                 <element signature="e#382#404#1#PHP" expanded="true" />
                 <element signature="e#1331#1353#1#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cergy/ApiBundle/Controller/NewsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="780">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding>
-                <element signature="e#46#86#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,7 +199,6 @@
         <option value="$PROJECT_DIR$/src/Cergy/BookBundle/Resources/views/Category/create.html.twig" />
         <option value="$PROJECT_DIR$/src/Cergy/BookBundle/form/CategoryType.php" />
         <option value="$PROJECT_DIR$/src/Cergy/BookBundle/Form/Type/CategoryType.php" />
-        <option value="$PROJECT_DIR$/src/Cergy/BookBundle/Controller/CategoryController.php" />
         <option value="$PROJECT_DIR$/src/Cergy/BookBundle/Resources/views/Book/create.html.twig" />
         <option value="$PROJECT_DIR$/src/Cergy/BookBundle/Entity/Repository/CategoryRepository.php" />
         <option value="$PROJECT_DIR$/src/Cergy/BookBundle/Resources/views/Book/_form.html.twig" />
@@ -209,6 +213,7 @@
         <option value="$PROJECT_DIR$/src/Cergy/BookBundle/Entity/Category.php" />
         <option value="$PROJECT_DIR$/src/Cergy/BookBundle/Entity/Book.php" />
         <option value="$PROJECT_DIR$/src/Cergy/BookBundle/Resources/views/Book/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Cergy/BookBundle/Controller/CategoryController.php" />
       </list>
     </option>
   </component>
@@ -842,7 +847,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Symfony2" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1132,16 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cergy/BookBundle/Controller/CategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="210" max-vertical-offset="660">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#47#91#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cergy/BookBundle/Form/Type/CategoryType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2083334" vertical-offset="419" max-vertical-offset="750">
@@ -1184,26 +1179,6 @@
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="150">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cergy/BookBundle/Controller/BookController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.291667" vertical-offset="1454" max-vertical-offset="1920">
-          <caret line="115" column="25" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
-          <folding>
-            <element signature="e#47#87#0#PHP" expanded="true" />
-            <element signature="e#564#586#1#PHP" expanded="true" />
-            <element signature="e#894#916#1#PHP" expanded="true" />
-            <element signature="e#1124#1136#1#PHP" expanded="true" />
-            <element signature="e#1611#1623#1#PHP" expanded="true" />
-            <element signature="e#1916#1942#1#PHP" expanded="true" />
-            <element signature="e#2164#2176#1#PHP" expanded="true" />
-            <element signature="e#2644#2656#1#PHP" expanded="true" />
-            <element signature="e#2953#2975#1#PHP" expanded="true" />
-            <element signature="e#3182#3194#1#PHP" expanded="true" />
-            <element signature="e#3441#3453#1#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1291,14 +1266,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cergy/BookBundle/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="1170">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cergy/NewsBundle/Entity/News.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.875" vertical-offset="105" max-vertical-offset="2430">
@@ -1322,9 +1289,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cergy/BookBundle/Resources/views/Book/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51877135" vertical-offset="28" max-vertical-offset="375">
+        <state vertical-scroll-proportion="-6.3333335" vertical-offset="28" max-vertical-offset="375">
           <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cergy/BookBundle/Entity/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875" vertical-offset="30" max-vertical-offset="1170">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cergy/BookBundle/Controller/BookController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0" vertical-offset="315" max-vertical-offset="1920">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="e#47#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cergy/BookBundle/Controller/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38053098" vertical-offset="516" max-vertical-offset="855">
+          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+          <folding>
+            <element signature="e#47#91#0#PHP" expanded="true" />
+            <element signature="e#1048#1060#1#PHP" expanded="true" />
+            <element signature="e#1290#1312#1#PHP" expanded="true" />
+            <element signature="e#1535#1563#1#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
