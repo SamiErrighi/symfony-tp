@@ -6,14 +6,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-class DefaultController extends Controller
+/**
+ * @route("/category")
+ */
+class CategoryController extends Controller
 {
     /**
-     * @Route("/hello/{name}")
+     * @Route("/create", name="")
      * @Template()
      */
-    public function indexAction($name)
+    public function createAction()
     {
-        return array('name' => $name);
+        return [];
     }
 }

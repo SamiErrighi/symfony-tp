@@ -1,8 +1,3 @@
-cergy_book:
-    resource: "@CergyBookBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 cergy_api_news:
     resource: "@CergyApiBundle/Controller/NewsController.php"
     type:     rest
@@ -15,6 +10,16 @@ cergy_user:
 
 cergy_news:
     resource: "@CergyNewsBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+cergy_books:
+    resource: "@CergyBookBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+cergy_categories:
+    resource: "@CergyBookBundle/Controller/"
     type:     annotation
     prefix:   /
 
